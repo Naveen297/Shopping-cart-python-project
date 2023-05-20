@@ -104,3 +104,7 @@ The `calculate_fees` method in the `ShoppingCart` class calculates the gift wrap
 ### Final Total Calculation
 
 Finally, the `checkout` method displays the names, quantities, and total costs of the products, the subtotal (i.e., the total cost before discounts and fees), the applied discount and its amount, the gift wrapping and shipping fees, and the final total after applying the discount and adding the fees.
+### My Resume
+```
+https://rxresu.me/r/6gs2_6NY
+```
