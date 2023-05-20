@@ -10,7 +10,7 @@ This Python program allows users to create a shopping cart with multiple product
 
 1. Clone this repository:
    ```
-   git clone https://github.com/your_username/shopping_cart_python
+   git clone https://github.com/Naveen297/shopping_cart_python
    ```
 2. Navigate into the cloned repository:
    ```
@@ -76,4 +76,31 @@ The program includes four types of discounts:
 
 ---
 
-Hope this README provides sufficient information for your GitHub post. Make sure to replace `your_username` with your actual GitHub username in the clone URL.
+## Program Workflow
+
+1. **Product Definition**: The program starts with defining the products available for purchase. Each product is an instance of the `Product` class, which has attributes like name and price.
+
+2. **Shopping Cart Creation**: A shopping cart is created as an instance of the `ShoppingCart` class. The cart keeps track of the added products, their quantities, and if they are gift-wrapped or not.
+
+3. **Adding Products**: The program then asks the user interactively about the quantity of each product they want to purchase and whether they want it to be gift-wrapped.
+
+4. **Checkout**: The `checkout` method in the `ShoppingCart` class calculates the total cost of the products, applies the best discount available, and adds the gift wrapping and shipping fees.
+
+### Discount Calculation
+
+The `ShoppingCart` class has methods to calculate different types of discounts:
+
+- The `flat_10_discount` method calculates a flat 10% discount if the total cost exceeds $200.
+- The `bulk_5_discount` method calculates a 5% discount on any product whose quantity exceeds 10.
+- The `bulk_10_discount` method calculates a 10% discount on the total if the total number of products exceeds 20.
+- The `tiered_50_discount` method calculates a 50% discount on the cost of any product whose quantity exceeds 15, but only for the units exceeding 15.
+
+The `apply_discount` method calculates all these discounts and applies the best one (i.e., the one resulting in the highest discount).
+
+### Fee Calculation
+
+The `calculate_fees` method in the `ShoppingCart` class calculates the gift wrapping and shipping fees. Gift wrapping costs $1 per unit. For shipping, 10 units can be packed into one package, and each package costs $5.
+
+### Final Total Calculation
+
+Finally, the `checkout` method displays the names, quantities, and total costs of the products, the subtotal (i.e., the total cost before discounts and fees), the applied discount and its amount, the gift wrapping and shipping fees, and the final total after applying the discount and adding the fees.
