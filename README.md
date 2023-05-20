@@ -1,4 +1,4 @@
-Sure, here's a detailed README file for this project:
+
 
 ---
 
